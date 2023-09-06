@@ -55,7 +55,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: |
           cd docs/code_of_copper
-          mkdocs build --force
+          mkdocs build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
