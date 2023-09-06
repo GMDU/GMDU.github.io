@@ -19,12 +19,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies & build
-        run: |
-          npm ci
-          npm run build          
+          node-version: ${{ matrix.node-version }} 
 
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -47,7 +42,11 @@ jobs:
           path: docs/code_of_copper
           ref: interpreter-rewrite
           node-version: ${{ matrix.node-version }}
-      - run: |
+
+       - name: Install dependencies & build
+        run: |
+          npm ci
+          npm run build
           mkdir -p ./_site/docs/code_of_copper
           cd docs/code_of_copper
           mkdocs build --site-dir ../../_site/docs/code_of_copper
