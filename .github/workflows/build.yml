@@ -50,7 +50,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: GMDU/code-of-copper
-          path: docs/code_of_copper
-          ref: interpreter-rewrite
-          node-version: ${{ matrix.node-version }}
+          path: interpreter-rewrite
+          ref: master
       - run: mkdocs gh-deploy --force
