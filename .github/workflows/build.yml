@@ -53,4 +53,4 @@ jobs:
           path: docs/code_of_copper
           ref: interpreter-rewrite
           node-version: ${{ matrix.node-version }}
-        run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force
