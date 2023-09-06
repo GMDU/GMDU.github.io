@@ -26,12 +26,6 @@ jobs:
           npm ci
           npm run build          
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./_site
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
@@ -54,10 +48,12 @@ jobs:
           ref: interpreter-rewrite
           node-version: ${{ matrix.node-version }}
       - run: |
+          mkdir -p ./_site/docs/code_of_copper
           cd docs/code_of_copper
-          mkdocs build
+          mkdocs build --site-dir ../../_site/docs/code_of_copper
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./docs/code_of_copper/site
+          publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
