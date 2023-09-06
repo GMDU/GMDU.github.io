@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="bg-gray-900 leading-tight text-white antialiased" lang="en">
+  <head>
+       
+   
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>Home | datapack.dev</title>
+
+<link rel="canonical" href="https://datapack.dev/about/" />
+
+<meta property="og:site_name" content="datapack.dev" />
+<meta property="og:title" content="Home | datapack.dev" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://datapack.dev/about/" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://datapack.dev/images/social-share.png" />
+<meta name="twitter:image" content="https://datapack.dev/images/social-share.png" />
+<meta property="og:image:alt" content="Page image for datapack.dev" />
+<meta name="twitter:image:alt" content="Page image for datapack.dev" />
+ 
+<meta name="description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
+<meta name="twitter:description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
+<meta property="og:description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
+
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
+<link rel="mask-icon" href="/favicon.svg" color="#4a5568" />
+
+<meta name="theme-color" content="#4a5568" />
+
+<!-- Preconnect to the font file origin -->
+<link rel="preconnect" href="https://rsms.me" crossorigin />
+
+<!-- Preload the font stylesheet asynchronously with low priority -->
+<link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
+
+<!-- https://www.filamentgroup.com/lab/load-css-simpler/ -->
+<link
+  crossorigin="anonymous"
+  rel="stylesheet"
+  href="https://rsms.me/inter/inter.css"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+/>
+
+    <script type="module" crossorigin src="/assets/main-0ea5d251.js"></script>
+    <link rel="stylesheet" href="/assets/main-b7cd0a4d.css">
+  </head>
+  <body class="min-h-screen bg-gray-900" data-env="production">
+    <header
+  class="flex bg-gradient-to-r from-header-start to-header-end select-none"
+>
+  <nav
+    class="flex h-16 grow items-center justify-between gap-4 px-4 text-white"
+  >
+    <a href="/" class="heading">
+      <figure class="flex flex-shrink-0 items-center space-x-1">
+        <img
+          alt="GMDU logo"
+          class="max-w-none"
+          src="/logo.png"
+          height="48"
+          width="48"
+          style="image-rendering: optimizeSpeed; image-rendering: pixelated"
+        />
+        <figcaption class="font-minecraft text-2xl hidden sm:block">
+          datapack.dev
+        </figcaption>
+      </figure>
+    </a>
+    <ul class="gap-2 hidden xs:flex">
+          
+      <li>
+        <a
+          href="/about/"
+          class="text-base font-bold cursor-default "
+          aria-current="page"
+        >
+          About
+        </a>
+      </li>
+          
+      <li>
+        <a
+          href="/projects/"
+          class="text-base font-bold underline "
+          
+        >
+          Projects
+        </a>
+      </li>
+          
+      <li>
+        <a
+          href="/docs/"
+          class="text-base font-bold underline "
+          
+        >
+          Docs
+        </a>
+      </li>
+          
+      <li>
+        <a
+          href="/guides/"
+          class="text-base font-bold underline "
+          
+        >
+          Guides
+        </a>
+      </li>
+      
+    </ul>
+    <div
+      class="flexbox xs:hidden gap-4 relative w-full"
+      x-data="{ menu: false }"
+    >
+      <span x-on:click="menu = !menu" class="cursor-pointer flex justify-end">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+          x-show="!menu"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+          x-show="menu"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </span>
+      <div
+        class="bg-gray-800 p-4 absolute w-full text-center -right-4 flex flex-col items-center gap-4"
+        x-show="menu"
+      >
+            
+        <a
+          href="/about/"
+          class="font-bold cursor-default decoration-purple-500 block text-2xl"
+          aria-current="page"
+        >
+          About
+        </a>
+          
+         
+        <a
+          href="/projects/"
+          class="font-bold underline decoration-purple-500 block text-2xl"
+          
+        >
+          Projects
+        </a>
+          
+         
+        <a
+          href="/docs/"
+          class="font-bold underline decoration-purple-500 block text-2xl"
+          
+        >
+          Docs
+        </a>
+          
+         
+        <a
+          href="/guides/"
+          class="font-bold underline decoration-purple-500 block text-2xl"
+          
+        >
+          Guides
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+ 
+<main id="main-content" tabindex="-1">
+  <div class="p-4">
+    <div class="prose prose-invert sm:prose-lg"><h2>Hosting</h2>
+<p>This site is deployed by, and hosted by <a href="https://www.netlify.com/">Netlify</a>.</p>
+<p class="flex items-center m-0">
+  Latest deploy status:
+  <a href="https://app.netlify.com/sites/11st-starter-kit/deploys" class="ml-2">
+    <img
+      src="https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status"
+      style="margin: 0"
+      alt="Netlify Status"
+    />
+  </a>
+</p>
+<h2>One-click deploy</h2>
+<p>To get your own instance of this <a href="https://11ty.io">Eleventy</a> starter project
+cloned and deploying to <a href="https://www.netlify.com">Netlify</a> very quickly, just
+click the button below and follow the instructions.</p>
+<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit"><img src="/assets/deploy-to-netlify-9c853093.svg" alt="Deploy to Netlify"></a></p>
+</div>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>
