@@ -42,14 +42,25 @@ jobs:
           path: docs/code_of_copper
           ref: interpreter-rewrite
           node-version: ${{ matrix.node-version }}
+      
+      - name: Clone Moxlib docs repository
+        uses: actions/checkout@v2
+        with:
+          repository: moxvallix/moxlib
+          path: docs/moxlib
+          ref: improved-documentation
+          node-version: ${{ matrix.node-version }}
           
       - name: Install dependencies & build
         run: |
           npm ci
           npm run build
           mkdir -p ./_site/docs/code_of_copper
+          mkdir -p ./_site/docs/moxlib
           cd docs/code_of_copper
-          mkdocs build --site-dir ../../_site/docs/code_of_copper 
+          mkdocs build --site-dir ../../_site/docs/code_of_copper
+          cd ../moxlib
+          mkdocs build --site-dir ../../_site/docs/moxlib
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
