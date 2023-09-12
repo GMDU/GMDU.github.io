@@ -1,0 +1,15 @@
+<div
+  class="w-full max-w-xs cursor-pointer overflow-hidden rounded bg-gray-700 shadow-md shadow-black outline-2 outline-header-start hover:outline"
+  onclick="location.href='{{ post.url }}'"
+>
+  <div
+    class="h-56 w-full bg-cover bg-center bg-no-repeat"
+    style="background-image: url('{{ post.data.img }}');"
+  ></div>
+  <div class="p-2 pb-8 pt-4">
+    <a class="no-style" href="{{ post.url }}"
+      ><h3 class="text-4xl font-bold">{{ post.data.title }}</h3></a
+    >
+    <p>{{ post.data.subtitle }}</p>
+  </div>
+</div>
