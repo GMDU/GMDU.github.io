@@ -23,6 +23,9 @@ module.exports = {
         'header-start': '#af4890',
         'header-end': '#4b51b5',
       },
+      backgroundImage: {
+        'tile-dark': 'url("/images/bg_tile.png")',
+      },
     },
   },
   variants: {},

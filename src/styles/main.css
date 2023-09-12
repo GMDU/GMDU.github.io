@@ -12,7 +12,7 @@
 
 
 /* Default Link Styles */
-a {
+a:not(.no-style) {
   @apply decoration-purple-500;
   @apply focus:underline focus:decoration-red-500;
   @apply hover:underline hover:text-purple-300 hover:decoration-red-500 active:decoration-purple-600;

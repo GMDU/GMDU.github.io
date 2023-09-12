@@ -3,7 +3,11 @@
   <head>
     {% include "partials/site-head.html" %}
   </head>
-  <body class="min-h-screen bg-gray-900" data-env="{{ node.env }}">
+  <body
+    class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
+    style="image-rendering: optimizeSpeed; image-rendering: pixelated"
+    data-env="{{ node.env }}"
+  >
     {% include "partials/site-header.html" %} {% block content %}{% endblock %}
 
     <script type="module" src="/main.js"></script>

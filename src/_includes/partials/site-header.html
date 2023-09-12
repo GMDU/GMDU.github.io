@@ -1,5 +1,5 @@
 <header
-  class="flex bg-gradient-to-r from-header-start to-header-end select-none"
+  class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-2xl shadow-black"
 >
   <nav
     class="flex h-16 grow items-center justify-between gap-4 px-4 text-white"
@@ -14,12 +14,12 @@
           width="48"
           style="image-rendering: optimizeSpeed; image-rendering: pixelated"
         />
-        <figcaption class="font-minecraft text-2xl hidden sm:block">
+        <figcaption class="hidden font-minecraft text-2xl sm:block">
           datapack.dev
         </figcaption>
       </figure>
     </a>
-    <ul class="gap-2 hidden xs:flex">
+    <ul class="hidden gap-2 xs:flex">
       {% for item in navigation.items %} {% if item.url == page.url %} {% assign
       highlight = 'cursor-default' %} {% assign current = 'aria-current="page"'
       %} {% else %} {% assign highlight = 'underline' %} {% assign current = ''
@@ -38,17 +38,17 @@
       {% endfor %}
     </ul>
     <div
-      class="flexbox xs:hidden gap-4 relative w-full"
+      class="flexbox relative w-full gap-4 xs:hidden"
       x-data="{ menu: false }"
     >
-      <span x-on:click="menu = !menu" class="cursor-pointer flex justify-end">
+      <span x-on:click="menu = !menu" class="flex cursor-pointer justify-end">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="h-6 w-6"
           x-show="!menu"
         >
           <path
@@ -63,7 +63,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="h-6 w-6"
           x-show="menu"
         >
           <path
@@ -74,7 +74,7 @@
         </svg>
       </span>
       <div
-        class="bg-gray-800 p-4 absolute w-full text-center -right-4 flex flex-col items-center gap-4"
+        class="absolute -right-4 flex w-full flex-col items-center gap-4 bg-gray-800 p-4 text-center"
         x-show="menu"
       >
         {% for item in navigation.items %} {% if item.url == page.url %} {%
