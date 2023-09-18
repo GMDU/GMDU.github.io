@@ -900,50 +900,50 @@
 </code></pre></div></p>
 <h2 id="precedence-8">Precedence 8</h2>
 <h3 id="power">Power (<code>**</code>)</h3>
-<p><a href="/data_types#integer">int</a> ** <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> ** <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code> to the power of <code>right</code>.<br />
 Note: Power is <a href="https://en.wikipedia.org/wiki/Operator_associativity" target="_blank">left associative</a>.</p>
 <hr />
 <h2 id="precedence-7">Precedence 7</h2>
 <h3 id="multiply">Multiply (<code>*</code>)</h3>
-<p><a href="/data_types#integer">int</a> * <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> * <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code> multiplied by <code>right</code>.</p>
 <h3 id="divide">Divide (<code>/</code>)</h3>
-<p><a href="/data_types#integer">int</a> / <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> / <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code> divided by <code>right</code>.</p>
 <h3 id="modulo">Modulo (<code>%</code>)</h3>
-<p><a href="/data_types#integer">int</a> % <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> % <a href="../data_types/#integer">int</a><br />
 Returns the remainder of dividing <code>left</code> by <code>right</code>.</p>
 <hr />
 <h2 id="precedence-6">Precedence 6</h2>
 <h3 id="add">Add (<code>+</code>)</h3>
-<p><a href="/data_types#integer">int</a> + <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> + <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code> plus <code>right</code>.</p>
-<p><a href="/data_types#string">string</a> + <a href="/data_types#string">string</a><br />
+<p><a href="../data_types/#string">string</a> + <a href="../data_types/#string">string</a><br />
 Returns the <a href="https://en.wikipedia.org/wiki/Concatenation" target="_blank">concatenated</a> string, <code>left</code> followed by <code>right</code>.</p>
-<p><a href="/data_types#array">array</a> + <a href="/data_types#array">array</a><br />
+<p><a href="../data_types/#array">array</a> + <a href="../data_types/#array">array</a><br />
 Returns the merged array containing all of <code>left</code>'s values followed by all of <code>right</code>'s values.</p>
-<p><a href="/data_types#object">object</a> + <a href="/data_types#object">object</a><br />
+<p><a href="../data_types/#object">object</a> + <a href="../data_types/#object">object</a><br />
 Returns <code>left</code> merged with <code>right</code>, with duplicate keys taking the value from <code>right</code>.</p>
 <h3 id="subtract-">Subtract (<code>-</code>)</h3>
-<p><a href="/data_types#integer">int</a> - <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> - <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code> minus <code>right</code>.</p>
 <hr />
 <h2 id="precedence-5">Precedence 5</h2>
 <h3 id="left-shift">Left shift (<code>&lt;&lt;</code>)</h3>
-<p><a href="/data_types#integer">int</a> &lt;&lt; <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> &lt;&lt; <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code>, with all the bits in it shifted left, <code>right</code> amount of times.<br />
 Equivalent to <code>left * (2 ** right)</code>.
 See <a href="https://en.wikipedia.org/wiki/Logical_left_shift" target="_blank">wikipedia</a> for more details.</p>
-<p><a href="/data_types#array">array</a> &lt;&lt; <a href="/data_types">any</a><br />
+<p><a href="../data_types/#array">array</a> &lt;&lt; <a href="../data_types/">any</a><br />
 Returns <code>left</code> with <code>right</code> appended to it.<br />
 If <code>left</code> is a variable, it mutates it.</p>
 <h3 id="right-shift">Right shift (<code>&gt;&gt;</code>)</h3>
-<p><a href="/data_types#integer">int</a> &gt;&gt; <a href="/data_types#integer">int</a><br />
+<p><a href="../data_types/#integer">int</a> &gt;&gt; <a href="../data_types/#integer">int</a><br />
 Returns <code>left</code>, with all the bits in it shifted right, <code>right</code> amount of times.<br />
 Equivalent to <code>left / (2 ** right)</code>.
 See <a href="https://en.wikipedia.org/wiki/Logical_right_shift" target="_blank">wikipedia</a> for more details.</p>
-<p><a href="/data_types">any</a> &gt;&gt; <a href="/data_types#array">array</a><br />
+<p><a href="../data_types/">any</a> &gt;&gt; <a href="../data_types/#array">array</a><br />
 Returns <code>right</code> with <code>left</code> prepended to it.<br />
 If <code>right</code> is a variable, it mutates it.</p>
 <hr />
@@ -963,26 +963,26 @@ Returns a boolean value, whether size<sup id="fnref7:2"><a class="footnote-ref" 
 <hr />
 <h2 id="precedence-3">Precedence 3</h2>
 <h3 id="equal">Equal (<code>==</code>)</h3>
-<p><a href="/data_types">any</a> == <a href="/data_types">any</a><br />
+<p><a href="../data_types/">any</a> == <a href="../data_types/">any</a><br />
 Returns a boolean value, whether <code>left</code> is equal to <code>right</code>.</p>
 <h3 id="not-equal">Not equal (<code>!=</code>)</h3>
-<p><a href="/data_types">any</a> != <a href="/data_types">any</a><br />
+<p><a href="../data_types/">any</a> != <a href="../data_types/">any</a><br />
 Returns a boolean value, whether <code>left</code> is not equal to <code>right</code>.</p>
 <hr />
 <h2 id="precedence-2">Precedence 2</h2>
 <h3 id="logical-and-and">Logical and (<code>&amp;&amp;</code>/<code>and</code>)</h3>
-<p><a href="/data_types">any</a> &amp;&amp; <a href="/data_types">any</a><br />
+<p><a href="../data_types/">any</a> &amp;&amp; <a href="../data_types/">any</a><br />
 If <code>left</code> is truthy<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, return <code>right</code>. Otherwise, return <code>left</code>.</p>
 <h3 id="logical-or-or">Logical or (<code>||</code>/<code>or</code>)</h3>
-<p><a href="/data_types">any</a> || <a href="/data_types">any</a><br />
+<p><a href="../data_types/">any</a> || <a href="../data_types/">any</a><br />
 If <code>left</code> is truthy<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, return <code>left</code>. Otherwise, return <code>right</code>.</p>
 <hr />
 <h2 id="precedence-1">Precedence 1</h2>
 <h3 id="assign">Assign (<code>=</code>)</h3>
-<p><a href="/keywords#let">variable</a> = <a href="/data_types">any</a><br />
+<p><a href="../keywords/#let">variable</a> = <a href="../data_types/">any</a><br />
 Sets the value of <code>left</code> to <code>right</code>.</p>
 <h3 id="operator-assignments-">Operator assignments (<code>+=</code>/<code>-=</code>/<code>*=</code>/<code>/=</code>/<code>%=</code>)</h3>
-<p><a href="/keywords#let">variable</a> &lt;operator&gt;= <a href="/data_types">any</a><br />
+<p><a href="../keywords/#let">variable</a> &lt;operator&gt;= <a href="../data_types/">any</a><br />
 Sets the value of <code>left</code> to the result of &lt;operator&gt; evaluated on <code>left</code> and <code>right</code>.
 <div class="highlight"><span class="filename">Example</span><pre><span></span><code><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1"># x == x + 2 == 3</span>

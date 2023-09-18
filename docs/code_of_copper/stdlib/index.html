@@ -532,30 +532,30 @@
 <h1 id="standard-library">Standard Library</h1>
 <p>The standard library is the set of builtin functions, avaliable in every GolemScript program.<br />
 They are all coded in native MCFunction, and execute within one game tick. (1/20 of a second)</p>
-<h2 id="void-print-any-value"><a href="/data_types#undefined">void</a> print ( <a href="/data_types">any</a> value )</h2>
+<h2 id="void-print-any-value"><a href="../data_types/#undefined">void</a> print ( <a href="../data_types/">any</a> value )</h2>
 <p>Outputs <code>value</code> to the game chat of anyone within 16 blocks of the golem.</p>
 <hr />
-<h2 id="void-move-int-x-int-y-int-z"><a href="/data_types#undefined">void</a> move ( <a href="/data_types#integer">int</a> x, <a href="/data_types#integer">int</a> y, <a href="/data_types#integer">int</a> z )</h2>
+<h2 id="void-move-int-x-int-y-int-z"><a href="../data_types/#undefined">void</a> move ( <a href="../data_types/#integer">int</a> x, <a href="../data_types/#integer">int</a> y, <a href="../data_types/#integer">int</a> z )</h2>
 <p>Moves the golem <code>x</code> blocks in the x direction, <code>y</code> blocks in the y direction, and <code>z</code> blocks in the z direction.<br />
 It moves a maximum of one block in each direction per tick.<br />
 If the golem cannot move at all, it skips this function.</p>
 <hr />
-<h2 id="resource-getblock-int-x-int-y-int-z"><a href="/data_types#resource">resource</a> getblock ( <a href="/data_types#integer">int</a> x, <a href="/data_types#integer">int</a> y, <a href="/data_types#integer">int</a> z )</h2>
+<h2 id="resource-getblock-int-x-int-y-int-z"><a href="../data_types/#resource">resource</a> getblock ( <a href="../data_types/#integer">int</a> x, <a href="../data_types/#integer">int</a> y, <a href="../data_types/#integer">int</a> z )</h2>
 <p>Returns the resource location of the block at <code>x</code>, <code>y</code>, <code>z</code>, relative to the golem.</p>
 <hr />
-<h2 id="void-place-resource-block-array-int-x-int-y-int-z"><a href="/data_types#undefined">void</a> place ( <a href="/data_types#resource">resource</a> block, <a href="/data_types#array">array</a> [<a href="/data_types#integer">int</a> x, <a href="/data_types#integer">int</a> y, <a href="/data_types#integer">int</a> z] )</h2>
+<h2 id="void-place-resource-block-array-int-x-int-y-int-z"><a href="../data_types/#undefined">void</a> place ( <a href="../data_types/#resource">resource</a> block, <a href="../data_types/#array">array</a> [<a href="../data_types/#integer">int</a> x, <a href="../data_types/#integer">int</a> y, <a href="../data_types/#integer">int</a> z] )</h2>
 <p>Places a <code>block</code> at <code>x</code>, <code>y</code>, <code>z</code>, relative to the golem.<br />
 If the golem does not have that block, it does nothing.<br />
 If the block at that position is not replaceable, it does nothing.<br />
 If <code>block</code> is a tool, it breaks the block at that position and puts the drop into its inventory.</p>
 <hr />
-<h2 id="void-sleep-int-time"><a href="/data_types#undefined">void</a> sleep ( <a href="/data_types#integer">int</a> time )</h2>
+<h2 id="void-sleep-int-time"><a href="../data_types/#undefined">void</a> sleep ( <a href="../data_types/#integer">int</a> time )</h2>
 <p>Pauses execution for <code>time</code> game ticks. (20 game ticks = 1 second)</p>
 <hr />
-<h2 id="int-random-int-min-int-max"><a href="/data_types#integer">int</a> random ( <a href="/data_types#integer">int</a> min, <a href="/data_types#integer">int</a> max )</h2>
+<h2 id="int-random-int-min-int-max"><a href="../data_types/#integer">int</a> random ( <a href="../data_types/#integer">int</a> min, <a href="../data_types/#integer">int</a> max )</h2>
 <p>Returns a random integer between <code>min</code> and <code>max</code>, inclusive.</p>
 <hr />
-<h2 id="string-match-regex-pattern-string-target"><a href="/data_types#string">string</a> match ( <a href="/data_types#regex">regex</a> pattern, <a href="/data_types#string">string</a> target )</h2>
+<h2 id="string-match-regex-pattern-string-target"><a href="../data_types/#string">string</a> match ( <a href="../data_types/#regex">regex</a> pattern, <a href="../data_types/#string">string</a> target )</h2>
 <p>Returns the first substring of <code>string</code> to match <code>pattern</code>.<br />
 If <code>pattern</code> does not match <code>string</code>, it returns an empty string.</p>
 
