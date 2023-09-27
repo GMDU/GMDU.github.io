@@ -47,8 +47,8 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-22dc12e1.js"></script>
-    <link rel="stylesheet" href="/assets/main-30a3b2ca.css">
+    <script type="module" crossorigin src="/assets/main-c2ee5539.js"></script>
+    <link rel="stylesheet" href="/assets/main-09116162.css">
   </head>
   <body
     class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
@@ -61,7 +61,7 @@
   <nav
     class="flex h-16 grow items-center justify-between gap-4 px-4 text-white"
   >
-    <a href="/" class="heading">
+    <a href="/" class="heading no-style hover:underline">
       <figure class="flex flex-shrink-0 items-center space-x-1">
         <img
           alt="GMDU logo"
@@ -81,7 +81,7 @@
       <li>
         <a
           href="/about/"
-          class="text-base font-bold underline "
+          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
           
         >
           About
@@ -91,7 +91,7 @@
       <li>
         <a
           href="/projects/"
-          class="text-base font-bold underline "
+          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
           
         >
           Projects
@@ -101,20 +101,10 @@
       <li>
         <a
           href="/docs/"
-          class="text-base font-bold underline "
+          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
           
         >
           Docs
-        </a>
-      </li>
-          
-      <li>
-        <a
-          href="/guides/"
-          class="text-base font-bold underline "
-          
-        >
-          Guides
         </a>
       </li>
       
@@ -186,24 +176,71 @@
         >
           Docs
         </a>
-          
-         
-        <a
-          href="/guides/"
-          class="font-bold underline decoration-purple-500 block text-2xl"
-          
-        >
-          Guides
-        </a>
         
       </div>
     </div>
   </nav>
 </header>
  
-<main id="main-content" tabindex="-1">
-  <div class="p-4">
-    <div class="prose prose-invert sm:prose-lg"></div>
+<main id="main-content" class="flex grow items-start justify-center py-12">
+  <div
+    id="overview"
+    class="mr-4 max-w-xs overflow-clip rounded bg-gray-900 shadow-2xl shadow-black"
+  >
+    <div>
+      <img src="/assets/regex_banner-132bbe86.png" alt="Promo image for Regex" />
+    </div>
+    <div class="p-4">
+      
+      <p class="mb-4">A library that provides a way to match substrings using regular expressions.</p>
+       
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="calendar" data-heroicon-style="outline" width=16 class="inline mr-0.5 mb-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span class="font-bold">Created:</span>
+        16 Feb, 2023
+      </p>
+       
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="link" data-heroicon-style="outline" width=16 class="inline mr-0.5 mb-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+        <span class="font-bold">Project Page:</span>
+        <a href="https://modrinth.com/datapack/regex">
+          Modrinth<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="external-link" data-heroicon-style="outline" width=10 class="inline ml-0.5 mb-2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </p>
+        
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="user" data-heroicon-style="outline" width=16 class="inline mr-0.5 mb-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <span class="font-bold">Authors:</span>
+      </p>
+      <ul class="ml-[2.25rem] list-disc">
+        
+        <li>
+          <a href="https://github.com/moxvallix" alt="Visit profile of Moxvallix.">
+            Moxvallix<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="external-link" data-heroicon-style="outline" width=10 class="inline ml-0.5 mb-2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://gearsdatapacks.github.io/" alt="Visit profile of Gears.">
+            Gears<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-heroicon-name="external-link" data-heroicon-style="outline" width=10 class="inline ml-0.5 mb-2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </li>
+        
+      </ul>
+       
+    </div>
+  </div>
+  <div
+    class="prose prose-invert w-full max-w-prose rounded bg-gray-900 p-4 shadow-2xl shadow-black"
+  >
+    <h1>Regex</h1>
+<p><strong>A library that provides a way to match substrings using regular expressions.</strong></p>
+<p>The concept for Regex was made after the announcement of <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-23w03a">Snapshot 23w03a</a>.</p>
+<p>Gears and Moxvallix had been in a Discord call, a few days after the release of the snapshot, and speculated that a
+Regex matcher should now be possible.</p>
+<p>After releasing v1 of Code of Copper, the two set to work trying to make the library, for it to be used in Code of Copper.</p>
+<p>Since, it hasn't seen much development activity, but bugfixes are planned in the future.</p>
+
   </div>
 </main>
 
