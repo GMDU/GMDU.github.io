@@ -1,0 +1,81 @@
+{% layout 'layouts/home.html' %} {% block content %}
+<main id="main-content" class="flex grow items-start justify-center py-12">
+  <div
+    id="overview"
+    class="mr-4 max-w-xs overflow-clip rounded bg-gray-900 shadow-2xl shadow-black"
+  >
+    <div>
+      <img src="{{ img }}" alt="Promo image for {{ title }}" />
+    </div>
+    <div class="p-4">
+      {% if summary %}
+      <p class="mb-4">{{ summary }}</p>
+      {% endif %} {% if created_at %}
+      <p>
+        {% heroicon "outline" "calendar" "" 'width=16 class="inline mr-0.5
+        mb-0.5"' %}
+        <span class="font-bold">Created:</span>
+        {{ created_at | date: "%d %b, %Y" }}
+      </p>
+      {% endif %} {% if project_link %}
+      <p>
+        {% heroicon "outline" "link" "" 'width=16 class="inline mr-0.5 mb-0.5"'
+        %}
+        <span class="font-bold">Project Page:</span>
+        <a href="{{ project_link[1] }}">
+          {{ project_link[0] }}{% heroicon "outline" "external-link" ""
+          'width=10 class="inline ml-0.5 mb-2"' %}
+        </a>
+      </p>
+      {% endif %} {% if docs %}
+      <p>
+        {% heroicon "outline" "book-open" "" 'width=16 class="inline mr-0.5
+        mb-0.5"' %}
+        <span class="font-bold">Documentation:</span>
+        <a href="{{ docs }}"> Visit docs </a>
+      </p>
+      {% endif %} {% if authors %}
+      <p>
+        {% heroicon "outline" "user" "" 'width=16 class="inline mr-0.5 mb-0.5"'
+        %}
+        <span class="font-bold">Authors:</span>
+      </p>
+      <ul class="ml-[2.25rem] list-disc">
+        {% for author in authors %}
+        <li>
+          <a href="{{ author[1] }}" alt="Visit profile of {{ author[0] }}.">
+            {{ author[0] }}{% heroicon "outline" "external-link" "" 'width=10
+            class="inline ml-0.5 mb-2"' %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% if contributors %}
+      <p>
+        {% heroicon "outline" "user-group" "" 'width=16 class="inline mr-0.5
+        mb-0.5"' %}
+        <span class="font-bold">Contributors:</span>
+      </p>
+      <ul class="ml-[2.25rem] list-disc">
+        {% for contributor in contributors %}
+        <li>
+          <a
+            href="{{ contributor[1] }}"
+            alt="Visit profile of {{ contributor[0] }}."
+          >
+            {{ contributor[0] }}{% heroicon "outline" "external-link" ""
+            'width=10 class="inline ml-0.5 mb-2"' %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  <div
+    class="prose prose-invert w-full max-w-prose rounded bg-gray-900 p-4 shadow-2xl shadow-black"
+  >
+    {{ content }}
+  </div>
+</main>
+{% endblock %}

@@ -2,18 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default Link Styles */
+@layer utilities {
+  .gmdu-link {
+    @apply decoration-white underline;
+    @apply focus:underline focus:decoration-red-500;
+    @apply hover:text-purple-300 hover:decoration-red-500 active:decoration-purple-600;
+  }
+}
+
+a:not(.no-style) {
+  @apply gmdu-link;
+}
+
 @font-face {
   font-display: swap;
   font-family: Minecraft;
   font-style:  normal;
   font-weight: 100;
   src: url("/Minecraft-Regular.woff2") format("woff2");
-}
-
-
-/* Default Link Styles */
-a:not(.no-style) {
-  @apply decoration-purple-500;
-  @apply focus:underline focus:decoration-red-500;
-  @apply hover:underline hover:text-purple-300 hover:decoration-red-500 active:decoration-purple-600;
 }

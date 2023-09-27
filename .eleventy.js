@@ -6,6 +6,7 @@ module.exports = function (config) {
   });
 
   config.addPlugin(EleventyVitePlugin);
+  config.addPlugin(require('eleventy-plugin-heroicons'));
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/images');
