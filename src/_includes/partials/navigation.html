@@ -1,0 +1,14 @@
+{% for item in navigation.items %} {% if item.url == page.url %}
+<li aria-current="page" class="font-bold underline decoration-red-500">
+  {{ item.text }}
+</li>
+{% else %}
+<li>
+  <a
+    href="{{ item.url }}"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    {{ item.text }}
+  </a>
+</li>
+{% endif %} {% endfor %}

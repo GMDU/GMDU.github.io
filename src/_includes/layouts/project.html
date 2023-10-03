@@ -1,16 +1,17 @@
 {% layout 'layouts/home.html' %} {% block content %}
-<main id="main-content" class="flex grow items-start justify-center py-12">
+<main id="main-content" class="flex flex-col lg:flex-row grow items-center lg:items-start lg:justify-center mob:py-6 sm:py-12 m-4">
   <div
     id="overview"
-    class="mr-4 max-w-xs overflow-clip rounded bg-gray-900 shadow-2xl shadow-black"
+    class="flex flex-col sm:flex-row lg:flex-col items-center m-4 mt-0 lg:ml-0 w-full max-w-prose lg:max-w-xs overflow-clip rounded bg-zinc-700 shadow-2xl shadow-black"
   >
-    <div>
-      <img src="{{ img }}" alt="Promo image for {{ title }}" />
+    <div class="mt-0 mob:m-4 lg:m-0 mob:max-w-xs w-full">
+      <img src="{{ img }}" alt="Promo image for {{ title }}" class="w-full rounded lg:rounded-none" />
     </div>
     <div class="p-4">
-      {% if summary %}
-      <p class="mb-4">{{ summary }}</p>
-      {% endif %} {% if created_at %}
+     {% if summary %}
+      <p class="pb-4">{{ summary }}</p>
+     {% endif %}
+     {% if created_at %}
       <p>
         {% heroicon "outline" "calendar" "" 'width=16 class="inline mr-0.5 mb-0.5"' %}
         <span class="font-bold">Created:</span>
@@ -65,7 +66,7 @@
     </div>
   </div>
   <div
-    class="prose prose-invert w-full max-w-prose rounded bg-gray-900 p-4 shadow-2xl shadow-black"
+    class="prose prose-invert w-full max-w-prose rounded bg-zinc-700 p-4 shadow-2xl shadow-black"
   >
     {{ content }}
   </div>

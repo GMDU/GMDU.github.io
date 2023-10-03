@@ -22,3 +22,15 @@ a:not(.no-style) {
   font-weight: 100;
   src: url("/Minecraft-Regular.woff2") format("woff2");
 }
+
+.focused {
+  display: none;
+}
+
+:focus > .focused {
+  display: unset;
+}
+
+:focus > .not-focused {
+  display: none;
+}

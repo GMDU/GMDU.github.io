@@ -25,7 +25,7 @@ contributors: {
 {{ title }} was made for the 7th [Datapack Jam](https://www.planetminecraft.com/group/datapack_jam).
 
 Within the span of a week, we managed to implement a full text-based programming language in a vanilla datapack.
-This was made possible thanks to [Snapshot 23w03a](https://www.minecraft.net/en-us/article/minecraft-snapshot-23w03a),
+This was made possible thanks to [Snapshot 23w03a](https://www.minecraft.net/en-us/article/minecraft-snapshot-23w03a/),
 which enabled us to split strings into arrays of characters.
 
 {{ title }} shows us how such a small, simple change, such as string splitting, can enable us to do so much more with datapacks.
