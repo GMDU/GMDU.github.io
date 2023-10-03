@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<title>Home | datapack.dev</title>
+<title>About | datapack.dev</title>
 
 <link rel="canonical" href="https://datapack.dev/about/" />
 
 <meta property="og:site_name" content="datapack.dev" />
-<meta property="og:title" content="Home | datapack.dev" />
+<meta property="og:title" content="About | datapack.dev" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://datapack.dev/about/" />
 
@@ -24,10 +24,6 @@
 <meta property="og:image:alt" content="Page image for datapack.dev" />
 <meta name="twitter:image:alt" content="Page image for datapack.dev" />
  
-<meta name="description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
-<meta name="twitter:description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
-<meta property="og:description" content="11st-Starter-Kit is a minimal starting point for building static websites with 11ty, powered by Vite with Tailwind CSS and Alpine.js." />
-
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="48x48" />
@@ -51,8 +47,8 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-c2ee5539.js"></script>
-    <link rel="stylesheet" href="/assets/main-09116162.css">
+    <script type="module" crossorigin src="/assets/main-1313097a.js"></script>
+    <link rel="stylesheet" href="/assets/main-1bc040b2.css">
   </head>
   <body
     class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
@@ -60,7 +56,7 @@
     data-env="production"
   >
     <header
-  class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-2xl shadow-black"
+  class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
   <nav
     class="flex h-16 grow items-center justify-between gap-4 px-4 text-white"
@@ -80,130 +76,107 @@
         </figcaption>
       </figure>
     </a>
-    <ul class="hidden gap-2 xs:flex">
-          
-      <li>
-        <a
-          href="/about/"
-          class="text-base font-bold cursor-default no-style hover:gmdu-link decoration-purple-500"
-          aria-current="page"
-        >
-          About
-        </a>
-      </li>
-          
-      <li>
-        <a
-          href="/projects/"
-          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
-          
-        >
-          Projects
-        </a>
-      </li>
-          
-      <li>
-        <a
-          href="/docs/"
-          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
-          
-        >
-          Docs
-        </a>
-      </li>
-      
+    <ul class="hidden gap-2 text-base leading-8 xs:flex">
+       
+<li aria-current="page" class="font-bold underline decoration-red-500">
+  About
+</li>
+  
+<li>
+  <a
+    href="/projects/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Projects
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/docs/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Docs
+  </a>
+</li>
+ 
+
     </ul>
-    <div
-      class="flexbox relative w-full gap-4 xs:hidden"
-      x-data="{ menu: false }"
-    >
-      <span x-on:click="menu = !menu" class="flex cursor-pointer justify-end">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="h-6 w-6"
-          x-show="!menu"
+    <div class="xs:hidden">
+      <details class="group">
+        <summary class="cursor-pointer list-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6 group-open:hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 group-open:block"
+            x-show="menu"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-gray-800 p-4 text-center"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="h-6 w-6"
-          x-show="menu"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </span>
-      <div
-        class="absolute -right-4 flex w-full flex-col items-center gap-4 bg-gray-800 p-4 text-center"
-        x-show="menu"
-      >
-            
-        <a
-          href="/about/"
-          class="font-bold cursor-default decoration-purple-500 block text-2xl"
-          aria-current="page"
-        >
-          About
-        </a>
-          
-         
-        <a
-          href="/projects/"
-          class="font-bold underline decoration-purple-500 block text-2xl"
-          
-        >
-          Projects
-        </a>
-          
-         
-        <a
-          href="/docs/"
-          class="font-bold underline decoration-purple-500 block text-2xl"
-          
-        >
-          Docs
-        </a>
-        
-      </div>
+          <ul class="text-2xl">
+             
+<li aria-current="page" class="font-bold underline decoration-red-500">
+  About
+</li>
+  
+<li>
+  <a
+    href="/projects/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Projects
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/docs/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Docs
+  </a>
+</li>
+ 
+
+          </ul>
+        </div>
+      </details>
     </div>
   </nav>
 </header>
  
-<main id="main-content" tabindex="-1">
+<main
+  id="main-content"
+  tabindex="-1"
+  class="flex grow items-start justify-center py-12"
+>
   <div class="p-4">
-    <div class="prose prose-invert sm:prose-lg"><h2>Hosting</h2>
-<p>This site is deployed by, and hosted by <a href="https://www.netlify.com/">Netlify</a>.</p>
-<p class="flex items-center m-0">
-  Latest deploy status:
-  <a href="https://app.netlify.com/sites/11st-starter-kit/deploys" class="ml-2">
-    <img
-      src="https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status"
-      style="margin: 0"
-      alt="Netlify Status"
-    />
-  </a>
-</p>
-<h2>One-click deploy</h2>
-<p>To get your own instance of this <a href="https://11ty.io">Eleventy</a> starter project
-cloned and deploying to <a href="https://www.netlify.com">Netlify</a> very quickly, just
-click the button below and follow the instructions.</p>
-<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit"><img src="/assets/deploy-to-netlify-9c853093.svg" alt="Deploy to Netlify"></a></p>
+    <div class="prose prose-invert sm:prose-lg"><h1>About GMDU</h1>
 </div>
   </div>
 </main>

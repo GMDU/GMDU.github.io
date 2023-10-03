@@ -51,8 +51,8 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-c2ee5539.js"></script>
-    <link rel="stylesheet" href="/assets/main-09116162.css">
+    <script type="module" crossorigin src="/assets/main-1313097a.js"></script>
+    <link rel="stylesheet" href="/assets/main-1bc040b2.css">
   </head>
   <body
     class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
@@ -60,7 +60,7 @@
     data-env="production"
   >
     <header
-  class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-2xl shadow-black"
+  class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
   <nav
     class="flex h-16 grow items-center justify-between gap-4 px-4 text-white"
@@ -80,107 +80,96 @@
         </figcaption>
       </figure>
     </a>
-    <ul class="hidden gap-2 xs:flex">
-          
-      <li>
-        <a
-          href="/about/"
-          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
-          
-        >
-          About
-        </a>
-      </li>
-          
-      <li>
-        <a
-          href="/projects/"
-          class="text-base font-bold underline no-style hover:gmdu-link decoration-purple-500"
-          
-        >
-          Projects
-        </a>
-      </li>
-          
-      <li>
-        <a
-          href="/docs/"
-          class="text-base font-bold cursor-default no-style hover:gmdu-link decoration-purple-500"
-          aria-current="page"
-        >
-          Docs
-        </a>
-      </li>
-      
+    <ul class="hidden gap-2 text-base leading-8 xs:flex">
+       
+<li>
+  <a
+    href="/about/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/projects/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Projects
+  </a>
+</li>
+  
+<li aria-current="page" class="font-bold underline decoration-red-500">
+  Docs
+</li>
+ 
+
     </ul>
-    <div
-      class="flexbox relative w-full gap-4 xs:hidden"
-      x-data="{ menu: false }"
-    >
-      <span x-on:click="menu = !menu" class="flex cursor-pointer justify-end">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="h-6 w-6"
-          x-show="!menu"
+    <div class="xs:hidden">
+      <details class="group">
+        <summary class="cursor-pointer list-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6 group-open:hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 group-open:block"
+            x-show="menu"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-gray-800 p-4 text-center"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="h-6 w-6"
-          x-show="menu"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </span>
-      <div
-        class="absolute -right-4 flex w-full flex-col items-center gap-4 bg-gray-800 p-4 text-center"
-        x-show="menu"
-      >
-          
-         
-        <a
-          href="/about/"
-          class="font-bold underline decoration-purple-500 block text-2xl"
-          
-        >
-          About
-        </a>
-          
-         
-        <a
-          href="/projects/"
-          class="font-bold underline decoration-purple-500 block text-2xl"
-          
-        >
-          Projects
-        </a>
-            
-        <a
-          href="/docs/"
-          class="font-bold cursor-default decoration-purple-500 block text-2xl"
-          aria-current="page"
-        >
-          Docs
-        </a>
-        
-      </div>
+          <ul class="text-2xl">
+             
+<li>
+  <a
+    href="/about/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/projects/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Projects
+  </a>
+</li>
+  
+<li aria-current="page" class="font-bold underline decoration-red-500">
+  Docs
+</li>
+ 
+
+          </ul>
+        </div>
+      </details>
     </div>
   </nav>
 </header>
@@ -192,7 +181,7 @@
   </div>
   <div class="flex w-full flex-wrap justify-center gap-4 p-4 pt-0"> 
 <div
-  class="w-full max-w-xs cursor-pointer overflow-hidden rounded bg-gray-700 shadow-md shadow-black outline-2 outline-header-start hover:outline"
+  class="w-full max-w-xs cursor-pointer overflow-hidden rounded bg-blue-900 shadow-md shadow-black outline-2 outline-header-start hover:outline"
   onclick="location.href='/docs/code_of_copper'"
 >
   <div
@@ -209,7 +198,7 @@
 
   
 <div
-  class="w-full max-w-xs cursor-pointer overflow-hidden rounded bg-gray-700 shadow-md shadow-black outline-2 outline-header-start hover:outline"
+  class="w-full max-w-xs cursor-pointer overflow-hidden rounded bg-blue-900 shadow-md shadow-black outline-2 outline-header-start hover:outline"
   onclick="location.href='/docs/moxlib'"
 >
   <div
