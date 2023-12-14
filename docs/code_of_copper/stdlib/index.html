@@ -393,6 +393,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#int-len-enumerable-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Len
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#int-random-int-min-int-max" class="md-nav__link">
     <span class="md-ellipsis">
       Random
@@ -405,6 +414,24 @@
   <a href="#string-match-regex-pattern-string-target" class="md-nav__link">
     <span class="md-ellipsis">
       Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-typeof-any-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typeof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerable-delete-enumerable-target-int-string-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete
     </span>
   </a>
   
@@ -505,6 +532,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -577,6 +624,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#int-len-enumerable-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Len
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#int-random-int-min-int-max" class="md-nav__link">
     <span class="md-ellipsis">
       Random
@@ -589,6 +645,24 @@
   <a href="#string-match-regex-pattern-string-target" class="md-nav__link">
     <span class="md-ellipsis">
       Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-typeof-any-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typeof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerable-delete-enumerable-target-int-string-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete
     </span>
   </a>
   
@@ -662,6 +736,12 @@ If <code>block</code> is a tool, it breaks the block at that position and puts t
 <h2 id="void-sleep-int-time"><a href="../data_types/#undefined">void</a> sleep ( <a href="../data_types/#integer">int</a> time )</h2>
 <p>Pauses execution for <code>time</code> game ticks. (20 game ticks = 1 second)</p>
 <hr />
+<h2 id="int-len-enumerable-value"><a href="../data_types/#integer">int</a> len ( <a href="../data_types/#enumerable">enumerable</a> value )</h2>
+<p>Returns the length of <code>value</code>.<br />
+For strings, this is the number of characters.<br />
+For arrays, this is the number of elements.<br />
+For objects, this is the number of key-value pairs.  </p>
+<hr />
 <h2 id="int-random-int-min-int-max"><a href="../data_types/#integer">int</a> random ( <a href="../data_types/#integer">int</a> min, <a href="../data_types/#integer">int</a> max )</h2>
 <p>Returns a random integer between <code>min</code> and <code>max</code>, inclusive.</p>
 <hr />
@@ -669,11 +749,25 @@ If <code>block</code> is a tool, it breaks the block at that position and puts t
 <p>Returns the first substring of <code>string</code> to match <code>pattern</code>.<br />
 If <code>pattern</code> does not match <code>string</code>, it returns an empty string.</p>
 <hr />
+<h2 id="string-typeof-any-value"><a href="../data_types/#string">string</a> typeof ( <a href="../data_types/">any</a> value )</h2>
+<p>Returns the name of the data type of <code>value</code>.
+Example:
+<div class="highlight"><pre><span></span><code><span class="n">typeof</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1"># integer</span>
+<span class="n">typeof</span><span class="p">(</span><span class="sr">/hi/</span><span class="p">)</span><span class="w"> </span><span class="c1"># regex</span>
+<span class="n">typeof</span><span class="p">(</span><span class="kp">true</span><span class="p">)</span><span class="w"> </span><span class="c1"># boolean</span>
+</code></pre></div></p>
+<hr />
+<h2 id="enumerable-delete-enumerable-target-int-string-index"><a href="../data_types/#enumerable">enumerable</a> delete ( <a href="../data_types/#enumerable">enumerable</a> target, <a href="../data_types/#integer">int</a> | <a href="../data_types/#string">string</a> index )</h2>
+<p>Returns a copy of <code>target</code> with the value at <code>target[index]</code> deleted from it.<br />
+For arrays, this is the nth value, where n is <code>index</code>.<br />
+For object, this is the value with a key of <code>index</code>.</p>
+<hr />
 <h2 id="object-x-int-y-int-z-int-pos"><a href="../data_types/#object">object</a> { x: <a href="../data_types/#integer">int</a>, y: <a href="../data_types/#integer">int</a>, z: <a href="../data_types/#integer">int</a> } pos ()</h2>
 <p>Returns the <code>x</code>, <code>y</code> and <code>z</code> coordinates of the golem.</p>
 <hr />
 <h2 id="array-resource-inventory"><a href="../data_types/#array">array</a> [ <a href="../data_types/#resource">resource</a> ] inventory ()</h2>
 <p>Returns an array of resources, the namespaced IDs of every item in the golem's inventory.</p>
+<hr />
 <h2 id="int-time"><a href="../data_types/#integer">int</a> time ()</h2>
 <p>Returns the current game time, in ticks. Equivalent to mcfunction: <code>/time query gametime</code></p>
 
