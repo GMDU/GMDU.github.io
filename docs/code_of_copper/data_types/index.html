@@ -663,8 +663,11 @@ bot:golem
 :diamond
 </code></pre></div>
 <p>Resources can be indexed with either square bracket or dot parameters.</p>
-<div class="highlight"><span class="filename">Example of Resources being indexed</span><pre><span></span><code>foo:bar.id # =&gt; &quot;bar&quot;
-:stone[&quot;namespace&quot;] # =&gt; &quot;minecraft&quot;
+<div class="highlight"><span class="filename">Example of Resources being indexed</span><pre><span></span><code>let res1 = foo:bar
+res1.id # =&gt; &quot;bar&quot;
+
+let res2 = :stone
+res2[&quot;namespace&quot;] # =&gt; &quot;minecraft&quot;
 </code></pre></div>
 <h2 id="array">Array</h2>
 <p>Arrays can contain a list of any data type, separated by commas. The list is enclosed in square brackets.<br />
@@ -683,8 +686,13 @@ Arrays may span multiple lines.</p>
 <span class="s1">]</span>
 </code></pre></div>
 <p>Arrays can be indexed with a following index integer, contained in square brackets.</p>
-<div class="highlight"><span class="filename">Example of an Array being indexed</span><pre><span></span><code><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; 2</span>
-<span class="o">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="o">][</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># i = 2, =&gt; &quot;baz&quot;</span>
+<div class="highlight"><span class="filename">Example of an Array being indexed</span><pre><span></span><code><span class="n">let</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">]</span>
+<span class="n">arr1</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; 2</span>
+
+<span class="n">let</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="o">]</span>
+<span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;baz&quot;</span>
 </code></pre></div>
 <h2 id="object">Object</h2>
 <p>Objects contain key-value pairs, with the values being any data type. Keys, however, must conform to variable naming.</p>
@@ -701,9 +709,12 @@ Arrays may span multiple lines.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Objects can be indexed with either square bracket or dot parameters.</p>
-<div class="highlight"><span class="filename">Example of Objects being indexed</span><pre><span></span><code><span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">.</span><span class="n">b</span><span class="w"> </span><span class="c1"># =&gt; &quot;bar&quot;</span>
-<span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;foo&quot;</span>
-<span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># i = &quot;c&quot;, =&gt; &quot;baz&quot;</span>
+<div class="highlight"><span class="filename">Example of Objects being indexed</span><pre><span></span><code><span class="n">let</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">b</span><span class="w"> </span><span class="c1"># =&gt; &quot;bar&quot;</span>
+<span class="n">obj</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;foo&quot;</span>
+
+<span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;c&quot;</span>
+<span class="n">obj</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;baz&quot;</span>
 </code></pre></div>
 
 
