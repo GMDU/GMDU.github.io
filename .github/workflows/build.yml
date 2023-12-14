@@ -41,7 +41,7 @@ jobs:
         with:
           repository: GMDU/code-of-copper
           path: docs/code_of_copper
-          ref: interpreter-rewrite
+          ref: main
           node-version: ${{ matrix.node-version }}
       
       - name: Clone Moxlib docs repository
