@@ -441,6 +441,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#two-sum-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Sum solution
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -506,6 +515,15 @@
   <a href="#pathfinding-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       Pathfinding algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-sum-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Sum solution
     </span>
   </a>
   
@@ -592,6 +610,41 @@
 
 <span class="k">while</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="ss">:stone</span><span class="p">)</span>
 <span class="k">end</span>
+</code></pre></div>
+<h2 id="two-sum-solution">Two Sum solution</h2>
+<p>A solution to the <a href="https://leetcode.com/problems/two-sum/description/">leetcode two sum</a> problem.<br />
+Written by amandin on Discord.</p>
+<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="kp">loop</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">undefined</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">i</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">func</span><span class="w"> </span><span class="n">twosum</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">targ</span><span class="p">)</span>
+<span class="w">  </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">targ</span>
+<span class="w">  </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="kp">loop</span><span class="w"> </span><span class="n">len</span>
+<span class="w">    </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="kp">loop</span><span class="w"> </span><span class="n">len</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">j</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">]</span>
+<span class="w">      </span><span class="k">end</span>
+<span class="w">      </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="k">end</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">[]</span>
+<span class="k">end</span>
+
+<span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span>
+<span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">twosum</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">))</span>
 </code></pre></div>
 
 
