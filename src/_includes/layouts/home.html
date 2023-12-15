@@ -4,8 +4,10 @@
   tabindex="-1"
   class="flex grow items-start justify-center py-12"
 >
-  <div class="p-4">
-    <div class="prose prose-invert sm:prose-lg">{{ content }}</div>
+  <div
+    class="prose prose-invert w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg xs:shadow sm:shadow-2xl"
+  >
+    {{ content }}
   </div>
 </main>
 {% endblock %}
