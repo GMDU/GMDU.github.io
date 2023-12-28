@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -399,15 +399,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#enumerable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumerable
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -488,26 +479,6 @@
   
   <span class="md-ellipsis">
     Examples
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plugins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plugins
   </span>
   
 
@@ -614,15 +585,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#enumerable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumerable
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -642,17 +604,6 @@
 
 
 <h1 id="data-types">Data Types</h1>
-<p>These are the base data types in GolemScript. They can be assigned to <a href="../keywords/#assignment">variables</a>,
-used in <a href="../syntax/#expressions">expressions</a>, or passed as parameters to <a href="../keywords/#functional">functions</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Assign to variable</span>
-<span class="n">let</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">]</span>
-
-<span class="c1"># Use in expression</span>
-<span class="s2">&quot;a&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;c&quot;</span>
-
-<span class="c1"># Pass to function</span>
-<span class="n">myfunc</span><span class="p">({</span><span class="nb">id</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;foo&#39;</span><span class="p">,</span><span class="w"> </span><span class="ss">value</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;bar&#39;</span><span class="p">})</span>
-</code></pre></div>
 <h2 id="undefined">Undefined</h2>
 <p>Undefined is the default value for variables that have not been assigned.<br />
 Functions without return statements will also return undefined.<br />
@@ -660,7 +611,6 @@ Indexing a literal that would not return a result also yields undefined.</p>
 <h2 id="boolean">Boolean</h2>
 <p>Booleans are written as <code>true</code> and <code>false</code>.</p>
 <h2 id="integer">Integer</h2>
-<p><strong>GolemScript currently only supports integers as numerics, no floats or doubles.</strong></p>
 <p>Integers are represented by the digits 0-9, and have the range of<br />
 <code>-2,147,483,648 (-2^31)</code> to <code>2,147,483,647 (2^31-1)</code>.</p>
 <div class="highlight"><span class="filename">Examples of valid Integers</span><pre><span></span><code>17
@@ -701,11 +651,8 @@ bot:golem
 :diamond
 </code></pre></div>
 <p>Resources can be indexed with either square bracket or dot parameters.</p>
-<div class="highlight"><span class="filename">Example of Resources being indexed</span><pre><span></span><code>let res1 = foo:bar
-res1.id # =&gt; &quot;bar&quot;
-
-let res2 = :stone
-res2[&quot;namespace&quot;] # =&gt; &quot;minecraft&quot;
+<div class="highlight"><span class="filename">Example of Resources being indexed</span><pre><span></span><code>foo:bar.id # =&gt; &quot;bar&quot;
+:stone[&quot;namespace&quot;] # =&gt; &quot;minecraft&quot;
 </code></pre></div>
 <h2 id="array">Array</h2>
 <p>Arrays can contain a list of any data type, separated by commas. The list is enclosed in square brackets.<br />
@@ -724,13 +671,8 @@ Arrays may span multiple lines.</p>
 <span class="s1">]</span>
 </code></pre></div>
 <p>Arrays can be indexed with a following index integer, contained in square brackets.</p>
-<div class="highlight"><span class="filename">Example of an Array being indexed</span><pre><span></span><code><span class="n">let</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">]</span>
-<span class="n">arr1</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; 2</span>
-
-<span class="n">let</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="o">]</span>
-<span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
-
-<span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;baz&quot;</span>
+<div class="highlight"><span class="filename">Example of an Array being indexed</span><pre><span></span><code><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; 2</span>
+<span class="o">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="o">][</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># i = 2, =&gt; &quot;baz&quot;</span>
 </code></pre></div>
 <h2 id="object">Object</h2>
 <p>Objects contain key-value pairs, with the values being any data type. Keys, however, must conform to variable naming.</p>
@@ -747,20 +689,10 @@ Arrays may span multiple lines.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Objects can be indexed with either square bracket or dot parameters.</p>
-<div class="highlight"><span class="filename">Example of Objects being indexed</span><pre><span></span><code><span class="n">let</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span>
-<span class="n">obj</span><span class="o">.</span><span class="n">b</span><span class="w"> </span><span class="c1"># =&gt; &quot;bar&quot;</span>
-<span class="n">obj</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;foo&quot;</span>
-
-<span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;c&quot;</span>
-<span class="n">obj</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;baz&quot;</span>
+<div class="highlight"><span class="filename">Example of Objects being indexed</span><pre><span></span><code><span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">.</span><span class="n">b</span><span class="w"> </span><span class="c1"># =&gt; &quot;bar&quot;</span>
+<span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span><span class="w"> </span><span class="c1"># =&gt; &quot;foo&quot;</span>
+<span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">c</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="c1"># i = &quot;c&quot;, =&gt; &quot;baz&quot;</span>
 </code></pre></div>
-<h2 id="enumerable">Enumerable</h2>
-<p>An enumarable is not a data type on its own, but rather a collection of data types, for the ease of documentation.<br />
-An enumerable is any type that has a series of sub-elements, and can be indexed.
-The current types that belong to the enumerable category are:<br />
-- <a href="#string">string</a><br />
-- <a href="#array">array</a><br />
-- <a href="#object">object</a>  </p>
 
 
 
