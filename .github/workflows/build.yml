@@ -44,6 +44,14 @@ jobs:
           ref: main
           node-version: ${{ matrix.node-version }}
       
+      - name: Clone GolemScript docs repository
+        uses: actions/checkout@v2
+        with:
+          repository: GMDU/golemscript
+          path: docs/golemscript
+          ref: main
+          node-version: ${{ matrix.node-version }}
+      
       - name: Clone Moxlib docs repository
         uses: actions/checkout@v2
         with:
@@ -57,9 +65,12 @@ jobs:
           npm ci
           npm run build
           mkdir -p ./_site/docs/code_of_copper
+          mkdir -p ./_site/docs/golemscript
           mkdir -p ./_site/docs/moxlib
           cd docs/code_of_copper
           mkdocs build --site-dir ../../_site/docs/code_of_copper
+          cd ../golemscript
+          mkdocs build --site-dir ../../_site/docs/golemscript
           cd ../moxlib
           mkdocs build --site-dir ../../_site/docs/moxlib
 

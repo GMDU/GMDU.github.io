@@ -7,7 +7,7 @@ docs: /docs/code_of_copper
 title: Code of Copper
 subtitle: Programmable Copper Golems.
 summary: Programmable Copper Golems. Fully text-based programming language in a vanilla datapack.
-created_at: 2023-01-30
+created_at: 2023-01-29
 project_link: ["Modrinth", "https://modrinth.com/datapack/code-of-copper"]
 authors: {
   "Moxvallix": "https://github.com/moxvallix",
