@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/home.html'
-title: 'About'
+title: 'Contact'
 ---
 # Contact Us
 
