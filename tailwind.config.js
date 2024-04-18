@@ -25,6 +25,7 @@ module.exports = {
       },
       backgroundImage: {
         'tile-dark': 'url("/images/bg_tile.png")',
+        promo: 'url("/images/promo.png")',
       },
     },
   },

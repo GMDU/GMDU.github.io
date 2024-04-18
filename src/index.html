@@ -1,0 +1,23 @@
+{% layout "layouts/base.html" %} {% block content %}
+<main
+  id="main-content"
+  class="flex grow flex-col items-center bg-promo bg-cover bg-center bg-no-repeat"
+>
+  <div class="mx-2 mt-12 rounded-lg bg-black/20 p-4 backdrop-blur-md lg:mt-64">
+    <h1 class="mb-2 text-3xl font-bold sm:text-5xl lg:text-7xl">
+      Welcome to datapack.dev
+    </h1>
+    <p class="text-lg sm:text-3xl">
+      We are GMDU, and we make technical datapacks for Minecraft.
+    </p>
+    <ul class="mt-4 text-left text-lg sm:text-2xl">
+      <li>Want to find out more? <a href="/about/">About Us</a>.</li>
+      <li>Want to reach out? <a href="/contact/">Contact Us</a>.</li>
+      <li>
+        Curious about what we have made?
+        <a href="/projects/">See our Projects</a>.
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}

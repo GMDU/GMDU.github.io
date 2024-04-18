@@ -4,11 +4,14 @@
     {% include "partials/site-head.html" %}
   </head>
   <body
-    class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
+    class="flex min-h-screen flex-col items-center bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
     style="image-rendering: optimizeSpeed; image-rendering: pixelated"
     data-env="{{ node.env }}"
   >
-    {% include "partials/site-header.html" %} {% block content %}{% endblock %}
+    <div class="flex w-full max-w-screen-hd grow flex-col">
+      {% include "partials/site-header.html" %} {% block content %}{% endblock
+      %}
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
