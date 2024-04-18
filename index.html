@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<title>Home | datapack.dev</title>
+<title> | datapack.dev</title>
 
 <link rel="canonical" href="https://datapack.dev/" />
 
 <meta property="og:site_name" content="datapack.dev" />
-<meta property="og:title" content="Home | datapack.dev" />
+<meta property="og:title" content=" | datapack.dev" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://datapack.dev/" />
 
@@ -24,10 +24,6 @@
 <meta property="og:image:alt" content="Page image for datapack.dev" />
 <meta name="twitter:image:alt" content="Page image for datapack.dev" />
  
-<meta name="description" content="datapack.dev - pushing the boundaries of a datapack" />
-<meta name="twitter:description" content="datapack.dev - pushing the boundaries of a datapack" />
-<meta property="og:description" content="datapack.dev - pushing the boundaries of a datapack" />
-
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="48x48" />
@@ -51,15 +47,16 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-1313097a.js"></script>
-    <link rel="stylesheet" href="/assets/main-1bc040b2.css">
+    <script type="module" crossorigin src="/assets/main-8e239e7c.js"></script>
+    <link rel="stylesheet" href="/assets/main-c7c9636b.css">
   </head>
   <body
-    class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
+    class="flex min-h-screen flex-col items-center bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
     style="image-rendering: optimizeSpeed; image-rendering: pixelated"
     data-env="production"
   >
-    <header
+    <div class="flex w-full max-w-screen-hd grow flex-col">
+      <header
   class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
   <nav
@@ -88,6 +85,15 @@
     class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
   >
     About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/contact/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Contact
   </a>
 </li>
   
@@ -145,7 +151,7 @@
           </svg>
         </summary>
         <div
-          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-gray-800 p-4 text-center"
+          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-black/40 p-4 text-center backdrop-blur-lg"
         >
           <ul class="text-2xl">
              
@@ -155,6 +161,15 @@
     class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
   >
     About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/contact/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Contact
   </a>
 </li>
   
@@ -186,24 +201,27 @@
  
 <main
   id="main-content"
-  tabindex="-1"
-  class="flex grow items-start justify-center py-12"
+  class="flex grow flex-col items-center bg-promo bg-cover bg-center bg-no-repeat"
 >
-  <div
-    class="prose prose-invert w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg xs:shadow sm:shadow-2xl"
-  >
-    <h1>welcome to datapack.dev</h1>
-<h2>This site is still WIP</h2>
-<p>There isn't a lot here right now, but we are working on it (slowly).<br>
-In the mean time, check out the neat things below!</p>
-<ul>
-<li><a href="/docs/">Visit Docs</a></li>
-<li><a href="/projects/">Visit Projects</a></li>
-</ul>
-
+  <div class="mx-2 mt-12 rounded-lg bg-black/20 p-4 backdrop-blur-md lg:mt-64">
+    <h1 class="mb-2 text-3xl font-bold sm:text-5xl lg:text-7xl">
+      Welcome to datapack.dev
+    </h1>
+    <p class="text-lg sm:text-3xl">
+      We are GMDU, and we make technical datapacks for Minecraft.
+    </p>
+    <ul class="mt-4 text-left text-lg sm:text-2xl">
+      <li>Want to find out more? <a href="/about/">About Us</a>.</li>
+      <li>Want to reach out? <a href="/contact/">Contact Us</a>.</li>
+      <li>
+        Curious about what we have made?
+        <a href="/projects/">See our Projects</a>.
+      </li>
+    </ul>
   </div>
 </main>
 
+    </div>
 
     
   </body>

@@ -47,15 +47,16 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-1313097a.js"></script>
-    <link rel="stylesheet" href="/assets/main-1bc040b2.css">
+    <script type="module" crossorigin src="/assets/main-8e239e7c.js"></script>
+    <link rel="stylesheet" href="/assets/main-c7c9636b.css">
   </head>
   <body
-    class="flex min-h-screen flex-col bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
+    class="flex min-h-screen flex-col items-center bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
     style="image-rendering: optimizeSpeed; image-rendering: pixelated"
     data-env="production"
   >
-    <header
+    <div class="flex w-full max-w-screen-hd grow flex-col">
+      <header
   class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
   <nav
@@ -84,6 +85,15 @@
     class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
   >
     About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/contact/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Contact
   </a>
 </li>
   
@@ -141,7 +151,7 @@
           </svg>
         </summary>
         <div
-          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-gray-800 p-4 text-center"
+          class="absolute left-0 top-16 flex w-screen flex-col items-center gap-4 bg-black/40 p-4 text-center backdrop-blur-lg"
         >
           <ul class="text-2xl">
              
@@ -151,6 +161,15 @@
     class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
   >
     About
+  </a>
+</li>
+  
+<li>
+  <a
+    href="/contact/"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    Contact
   </a>
 </li>
   
@@ -286,6 +305,7 @@ It won first place in the jam, and has been actively developed ever since.</p>
   </div>
 </main>
 
+    </div>
 
     
   </body>
