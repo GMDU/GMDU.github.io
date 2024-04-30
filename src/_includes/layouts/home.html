@@ -1,11 +1,10 @@
 {% layout "layouts/base.html" %} {% block content %}
 <main
   id="main-content"
-  tabindex="-1"
-  class="flex grow items-start justify-center py-12"
+  class="flex grow items-start justify-center py-4 xs:py-8 sm:py-12"
 >
   <div
-    class="prose prose-invert w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg xs:shadow sm:shadow-2xl"
+    class="prose prose-invert mx-2 w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg prose-headings:mt-0 prose-headings:mb-2 xs:shadow sm:shadow-2xl"
   >
     {{ content }}
   </div>

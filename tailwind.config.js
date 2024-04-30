@@ -16,8 +16,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Lato', ...defaultTheme.fontFamily.sans],
         minecraft: ['Minecraft', ...defaultTheme.fontFamily.mono],
+        heading: ['Lilita One', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'header-start': '#af4890',

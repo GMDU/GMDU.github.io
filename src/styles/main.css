@@ -20,7 +20,31 @@ a:not(.no-style) {
   font-family: Minecraft;
   font-style:  normal;
   font-weight: 100;
-  src: url("/Minecraft-Regular.woff2") format("woff2");
+  src: url("/fonts/Minecraft-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Lilita One";
+  font-style:  normal;
+  font-weight: 100;
+  src: url("/fonts/LilitaOne-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Lato-Bold.ttf");
 }
 
 .focused {
@@ -33,4 +57,9 @@ a:not(.no-style) {
 
 :focus > .not-focused {
   display: none;
+}
+
+/* Safari Fixes */
+details summary.list-none::-webkit-details-marker {
+  display:none;
 }
