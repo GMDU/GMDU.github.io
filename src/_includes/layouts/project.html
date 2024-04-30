@@ -25,6 +25,14 @@
           {{ project_link[0] }}{% heroicon "outline" "external-link" "" 'width=10 class="inline ml-0.5 mb-2"' %}
         </a>
       </p>
+      {% endif %} {% if other_links %}
+        {% heroicon "outline" "link" "" 'width=16 class="inline mr-0.5 mb-0.5"' %}
+        <span class="font-bold">Project Links:</span>
+        <ul class="ml-[2.25rem] list-disc">
+          {% for link in other_links %}
+            <li><a href="{{ link[1] }}">{{ link[0] }}{% heroicon "outline" "external-link" "" 'width=10 class="inline ml-0.5 mb-2"' %}</a></li>
+          {% endfor %}
+        </ul>
       {% endif %} {% if docs %}
       <p>
         {% heroicon "outline" "book-open" "" 'width=16 class="inline mr-0.5 mb-0.5"' %}

@@ -7,7 +7,10 @@ title: Datapack Podcast
 subtitle: Join us as we explore Minecraft through the lens of datapacking.
 summary: A podcast about Minecraft, from the perspective of two technical datapackers.
 created_at: 2024-04-27
-project_link: ["Youtube Channel", "https://youtube.com/@datapackdev"]
+other_links:
+  - ["Youtube Channel", "https://youtube.com/@datapackdev"]
+  - ["Homepage", "https://podcast.datapack.dev"]
+  - ["RSS Feed", "https://podcast.datapack.dev/rss.xml"]
 authors: {
   "Moxvallix": "https://github.com/moxvallix",
   "Gears": "https://gearsdatapacks.github.io/"
