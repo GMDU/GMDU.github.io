@@ -47,15 +47,15 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-8e239e7c.js"></script>
-    <link rel="stylesheet" href="/assets/main-c7c9636b.css">
+    <script type="module" crossorigin src="/assets/main-179ada2f.js"></script>
+    <link rel="stylesheet" href="/assets/main-0f073439.css">
   </head>
   <body
     class="flex min-h-screen flex-col items-center bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
     style="image-rendering: optimizeSpeed; image-rendering: pixelated"
     data-env="production"
   >
-    <div class="flex w-full max-w-screen-hd grow flex-col">
+    <div class="flex w-full max-w-screen-hd grow flex-col bg-black/40">
       <header
   class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
@@ -72,7 +72,9 @@
           width="48"
           style="image-rendering: optimizeSpeed; image-rendering: pixelated"
         />
-        <figcaption class="hidden font-minecraft text-2xl sm:block">
+        <figcaption
+          class="font-minecraft text-[20px] xs:hidden sm:block sm:text-[30px]"
+        >
           datapack.dev
         </figcaption>
       </figure>
@@ -191,16 +193,14 @@
  
 <main
   id="main-content"
-  tabindex="-1"
-  class="flex grow items-start justify-center py-12"
+  class="flex grow items-start justify-center py-4 xs:py-8 sm:py-12"
 >
   <div
-    class="prose prose-invert w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg xs:shadow sm:shadow-2xl"
+    class="prose prose-invert mx-2 w-full rounded bg-zinc-700 p-4 shadow-black sm:prose-lg prose-headings:mt-0 prose-headings:mb-2 xs:shadow sm:shadow-2xl"
   >
-    <h1>About GMDU</h1>
-<p>GMDU, or Gears (and) Moxvallix Datapack Universe, is a small team of datapack developers making
-needlessly complicated datapacks for Minecraft: Java Edition. The GMDU team, unsurprisingly, consists
-of Gears, and Moxvallix.</p>
+    <h1>About <span class="font-heading">GMDU</span></h1>
+<p><span class="font-heading">GMDU</span>, or Gears (and) Moxvallix Datapack Universe, is a small team of datapack developers making needlessly complicated datapacks for Minecraft: Java Edition.
+The <span class="font-heading">GMDU</span> team, unsurprisingly, consists of Gears, and Moxvallix.</p>
 <p>Our main focus has been <a href="/projects/code_of_copper/">Code of Copper</a>, but we are looking to work on some other projects
 as well. All of our projects can be found on our <a href="/projects/">Projects Page</a>.</p>
 

@@ -48,15 +48,15 @@
   onload="this.media='all'; this.onload=null;"
 />
 
-    <script type="module" crossorigin src="/assets/main-8e239e7c.js"></script>
-    <link rel="stylesheet" href="/assets/main-c7c9636b.css">
+    <script type="module" crossorigin src="/assets/main-179ada2f.js"></script>
+    <link rel="stylesheet" href="/assets/main-0f073439.css">
   </head>
   <body
     class="flex min-h-screen flex-col items-center bg-gray-900 bg-tile-dark bg-[length:64px_64px]"
     style="image-rendering: optimizeSpeed; image-rendering: pixelated"
     data-env="production"
   >
-    <div class="flex w-full max-w-screen-hd grow flex-col">
+    <div class="flex w-full max-w-screen-hd grow flex-col bg-black/40">
       <header
   class="relative z-10 flex select-none bg-gradient-to-r from-header-start to-header-end shadow-black xs:shadow sm:shadow-2xl"
 >
@@ -73,7 +73,9 @@
           width="48"
           style="image-rendering: optimizeSpeed; image-rendering: pixelated"
         />
-        <figcaption class="hidden font-minecraft text-2xl sm:block">
+        <figcaption
+          class="font-minecraft text-[20px] xs:hidden sm:block sm:text-[30px]"
+        >
           datapack.dev
         </figcaption>
       </figure>
@@ -203,20 +205,26 @@
 <main
   id="main-content"
   class="flex grow flex-col items-center bg-promo bg-cover bg-center bg-no-repeat"
+  style="font-family: Lato"
 >
   <div class="mx-2 mt-12 rounded-lg bg-black/20 p-4 backdrop-blur-md lg:mt-64">
-    <h1 class="mb-2 text-3xl font-bold sm:text-5xl lg:text-7xl">
+    <h1 class="mb-2 font-heading text-3xl font-normal sm:text-5xl lg:text-7xl">
       Welcome to datapack.dev
     </h1>
     <p class="text-lg sm:text-3xl">
-      We are GMDU, and we make technical datapacks for Minecraft.
+      We are <span class="font-heading">GMDU</span>, and we make technical
+      datapacks for Minecraft.
     </p>
     <ul class="mt-4 text-left text-lg sm:text-2xl">
-      <li>Want to find out more? <a href="/about/">About Us</a>.</li>
-      <li>Want to reach out? <a href="/contact/">Contact Us</a>.</li>
+      <li>
+        Want to find out more? <a href="/about/" class="font-bold">About Us</a>.
+      </li>
+      <li>
+        Want to reach out? <a href="/contact/" class="font-bold">Contact Us</a>.
+      </li>
       <li>
         Curious about what we have made?
-        <a href="/projects/">See our Projects</a>.
+        <a href="/projects/" class="font-bold">See our Projects</a>.
       </li>
     </ul>
   </div>
