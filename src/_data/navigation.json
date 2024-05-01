@@ -16,5 +16,11 @@
       "text": "Docs",
       "url": "/docs/"
     }
+  ],
+  "external_items": [
+    {
+      "text": "Podcast",
+      "url": "https://podcast.datapack.dev"
+    }
   ]
 }

@@ -8,7 +8,20 @@
     href="{{ item.url }}"
     class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
   >
-    {{ item.text }}
+    {{ item.text }} {% if item.external %}{% heroicon "outline" "external-link"
+    "" 'width=10 class="inline mb-2"' %}{% endif %}
   </a>
 </li>
-{% endif %} {% endfor %}
+{% endif %} {% endfor %} {% if navigation.external_items.size > 0 %}
+<span class="hidden xs:inline">|</span>
+<hr class="my-4 mx-auto max-w-[10rem] xs:hidden" />
+{% endif %} {% for item in navigation.external_items %}
+<li>
+  <a
+    href="{{ item.url }}"
+    class="no-style hover:gmdu-link font-bold underline decoration-purple-500"
+  >
+    {{ item.text }} {% heroicon "outline" "external-link" "" 'width=10 class="inline mb-2"' %}
+  </a>
+</li>
+{% endfor %}
